@@ -12,6 +12,8 @@ export class Cache {
   size2: string;
   last_found: string;
 
+  logs: any[];
+
 
 constructor(code: string, name: string, location: string, status: string, type: string) {
   this.code = code;

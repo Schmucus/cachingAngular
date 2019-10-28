@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { CachesService } from './caches.service';
@@ -13,12 +12,21 @@ import { MapsComponent } from './maps/maps.component';
 import { FullDetailsComponent } from './full-details/full-details.component';
 import {TabViewModule} from 'primeng/tabview';
 import { DetailsMenuComponent } from './details-menu/details-menu.component';
+import {TabMenuModule} from 'primeng/tabmenu';
+import {MenuItem} from 'primeng/api';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {Router, RouterModule, Routes} from '@angular/router';
+import {TableModule} from 'primeng/table';
+import {MenuModule} from 'primeng/menu';
+import { LogsComponent } from './logs/logs.component';
+
+
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule, GMapModule, TabViewModule ],
-  declarations: [ AppComponent, HelloComponent, CacheShortDetailsComponent, TestComponent, MapsComponent, FullDetailsComponent, DetailsMenuComponent ],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule, GMapModule, TabViewModule, TabMenuModule, TableModule, MenuModule, BrowserAnimationsModule, RouterModule  ],
+  declarations: [ AppComponent, HelloComponent, CacheShortDetailsComponent, TestComponent, MapsComponent, FullDetailsComponent, DetailsMenuComponent, LogsComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [CachesService]
+  providers: [CachesService, { provide: Router, useValue: {} }]
 })
 export class AppModule { }

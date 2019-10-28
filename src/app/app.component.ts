@@ -47,6 +47,7 @@ onCodeSent(payload) {
   this.payload = payload;
   this.selectedCache = payload;
   this.loadDetails();
+  this.cachesService.getLogs(this.selectedCache);
   }
 
 

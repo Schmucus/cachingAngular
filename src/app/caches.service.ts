@@ -62,6 +62,16 @@ export class CachesService {
   }
 
 
+  getLogs(cache: Cache) {
+    console.log('getLogs');
+    console.log(this.http.get<any>('https://www.opencaching.de/okapi/services/logs/logs?cache_code=' + cache.code + '&consumer_key=6EVPRQhKzSwVrDpT33WF')
+    .subscribe(result => {
+      console.log('result');
+      console.log(result);
+      console.log('result[0]');
+      console.log(result[0]);
+    }));
+  }
 
 
 
