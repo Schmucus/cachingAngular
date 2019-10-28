@@ -1,0 +1,30 @@
+<table style="100%">
+<tr>
+  <td width="40%">
+    <div class="scrolldiv">
+<div *ngFor="let cache of myCaches">
+  <app-cache-short-details [cache]="cache" (code)="onCodeSent($event)"></app-cache-short-details>
+</div>
+</div>
+  </td>
+
+<td width="60%">
+ <!-- <p-gmap [options]="options" [style]="{'width':'100%','height':'320px'}" ></p-gmap> 
+ <app-test [wort]="payload"></app-test> -->
+ <div class="scrolldiv">
+<app-full-details [temp]="payload"></app-full-details>
+</div>
+</td>
+</tr>
+</table>
+
+
+
+
+
+<button (click)="buttonPressed()">klick</button>
+<button (click)="button2Pressed()">klick2"</button>
+
+
+
+

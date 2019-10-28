@@ -1,0 +1,8 @@
+<div *ngIf="cache">
+  <h3 #title (click)="hClicked()">{{ cache.name }}</h3>
+  <p>Code: {{ cache.code }}</p>
+  <p>Ort: {{ cache.location }}</p>
+  <p>Status: {{ cache.status }}</p>
+  <p>Typ: {{ cache.type }}</p>
+  <hr>
+</div>

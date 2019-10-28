@@ -1,0 +1,98 @@
+<div *ngIf="cache; else elseBlock">
+<h1>
+{{ cache.name }}
+</h1>
+<hr>
+
+<table>
+  <tr>
+    <td>
+      Opencaching-Code:
+    </td>
+    <td>
+      {{ cache.code }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Location:
+    </td>
+    <td>
+      {{ cache.location }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Status:
+    </td>
+    <td>
+      {{ cache.status }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Typ:
+    </td>
+    <td>
+      {{ cache.type }}
+    </td>
+  </tr>
+   <tr>
+    <td>
+      Schwierigkeit:
+    </td>
+    <td>
+      {{ cache.difficulty }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Terrain:
+    </td>
+    <td>
+      {{ cache.terrain }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Distanz:
+    </td>
+    <td>
+      {{ cache.distance }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Kurzbeschreibung:
+    </td>
+    <td>
+      {{ cache.short_description }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Größe:
+    </td>
+    <td>
+      {{ cache.size2 }}
+    </td>
+  </tr>
+   <tr>
+    <td>
+      zuletzt gefunden:
+    </td>
+    <td>
+      {{ cache.last_found | date}}
+    </td>
+  </tr>
+</table>
+
+
+<app-maps></app-maps>
+
+
+</div>
+
+<!-- wird angezeigt, solange noch kein Cache ausgewählt wurde -->
+<ng-template #elseBlock>
+  <h1>Cache aus der Liste wählen</h1>

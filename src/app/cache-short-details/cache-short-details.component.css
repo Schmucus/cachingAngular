@@ -1,0 +1,11 @@
+h3 {
+  color: blue;
+}
+
+h3:hover {
+  cursor: pointer;
+}
+
+h3:visited {
+  color: #000;
+}
