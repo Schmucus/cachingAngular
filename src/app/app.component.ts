@@ -45,12 +45,14 @@ button2Pressed() {
 onCodeSent(payload) {
   console.log('code sent: ' + payload);
   this.payload = payload;
+  this.selectedCache = payload;
+  this.loadDetails();
   }
 
 
 loadDetails() {
     console.log('in FullDetails.loadDetails: ');
-    this.cachesService.getFullCacheDetails(this.cache).subscribe(result => {
+    this.cachesService.getFullCacheDetails(this.selectedCache).subscribe(result => {
       console.log(result);
       console.log(result.terrain);
       console.log(result.short_description);
