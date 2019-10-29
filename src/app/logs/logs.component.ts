@@ -8,11 +8,16 @@ import { Log } from '../log';
 })
 export class LogsComponent implements OnInit {
 
-  @Input() log: Log[];
+  @Input() logs: Log[];
 
   constructor() { }
 
   ngOnInit() {
+    console.log('logs.component ngOnInit');
+  }
+
+  onClick() {
+    console.log(this.logs);
   }
 
 }

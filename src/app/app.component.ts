@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CachesService } from './caches.service';
-import {GMapModule} from 'primeng/gmap';
+import { GMapModule } from 'primeng/gmap';
 import { Cache } from '../cache';
+import { Log } from '../log';
 
 @Component({
   selector: 'my-app',
@@ -14,6 +15,7 @@ export class AppComponent  {
 
   payload;
   selectedCache: Cache;
+  logs: Log[];
 
   myCaches;
   options;
@@ -23,6 +25,7 @@ export class AppComponent  {
   }
 
 ngOnInit() {
+  this.logs = [];
   const _this  = this;
   this.myCaches = this.cachesService.getDetailedCaches();
   this.options = {
@@ -47,7 +50,8 @@ onCodeSent(payload) {
   this.payload = payload;
   this.selectedCache = payload;
   this.loadDetails();
-  this.cachesService.getLogs(this.selectedCache);
+  //this.logs = this.cachesService.getLogs(this.selectedCache);
+  this.loadLogs();
   }
 
 
@@ -64,6 +68,17 @@ loadDetails() {
       this.selectedCache.size2 = result.size2;
       this.selectedCache.last_found = result.last_found;
       });
+  }
+
+  loadLogs() {
+    console.log('appComponent.loadLogs');
+    this.cachesService.getLogs(this.selectedCache).subscribe(result => {
+      console.log(result);
+      //this.logs = result;
+      for (var i in result) {
+        this.logs.push(result[i]);
+      }
+    });
   }
 
 }

@@ -5,6 +5,7 @@ import {TabMenuModule} from 'primeng/tabmenu';
 import {MenuItem} from 'primeng/api';
 import {MenuModule} from 'primeng/menu';
 import {TabViewModule} from 'primeng/tabview';
+import { Log } from '../log';
 
 
 @Component({
@@ -15,6 +16,7 @@ import {TabViewModule} from 'primeng/tabview';
 export class DetailsMenuComponent implements OnInit {
 
   @Input() cache: Cache;
+  @Input() logs: Log[];
 
   menuItems: MenuItem[];
   rows = [1,2,3,4];

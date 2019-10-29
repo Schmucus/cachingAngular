@@ -1,8 +1,10 @@
 <p> logs component</p>
 <div *ngIf="logs; else elseBlock">
-
-
+  <p *ngFor="let log of logs">
+    {{ log.comment}}
+  </p>
 </div>
 <ng-template #elseBlock>
   <p>keine Logs vorhanden</p>
 </ng-template>
+<button (click)="onClick()">klick</button>
