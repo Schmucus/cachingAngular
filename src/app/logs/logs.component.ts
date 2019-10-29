@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Log } from '../log';
 
 @Component({
   selector: 'app-logs',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogsComponent implements OnInit {
 
-  @Input()
+  @Input() log: Log[];
 
   constructor() { }
 
