@@ -1,7 +1,7 @@
 <p> logs component</p>
 <div *ngIf="logs; else elseBlock">
   <div *ngFor="let log of logs">
-    {{ log.comment}}
+    <app-log-details [log]="log"></app-log-details>
      <hr>
   </div>
  

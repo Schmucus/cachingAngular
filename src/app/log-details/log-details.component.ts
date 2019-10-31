@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Log } from '../log';
 
 @Component({
   selector: 'app-log-details',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./log-details.component.css']
 })
 export class LogDetailsComponent implements OnInit {
+
+  @Input() log: Log;
 
   constructor() { }
 

@@ -1,6 +1,7 @@
 
-
-
+<div *ngIf="cache; else elseBlock">
+<h1>{{ cache.name }}</h1>
+<hr>
 <p-tabView>
     <p-tabPanel header="Übersicht">
        <app-full-details [temp]="cache"></app-full-details>
@@ -12,5 +13,10 @@
         Content 3
     </p-tabPanel>
 </p-tabView>
+</div>
+
+<!-- wird angezeigt, solange noch kein Cache ausgewählt wurde -->
+<ng-template #elseBlock>
+  <h1>Cache aus der Liste wählen</h1>
 
 

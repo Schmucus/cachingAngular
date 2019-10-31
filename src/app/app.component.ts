@@ -47,6 +47,7 @@ button2Pressed() {
 
 onCodeSent(payload) {
   console.log('code sent: ' + payload);
+  this.logs = [];
   this.payload = payload;
   this.selectedCache = payload;
   this.loadDetails();
