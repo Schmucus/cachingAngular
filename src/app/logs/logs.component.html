@@ -1,12 +1,16 @@
-<p> logs component</p>
-<div *ngIf="logs; else elseBlock">
+<div class="scrolldiv">
+<div  *ngIf="logs; else elseBlock">
+  
   <div *ngFor="let log of logs">
     <app-log-details [log]="log"></app-log-details>
      <hr>
   </div>
  
+
+ 
 </div>
 <ng-template #elseBlock>
   <p>keine Logs vorhanden</p>
 </ng-template>
-<button (click)="onClick()">klick</button>
+<!--<button (click)="onClick()">klick</button>-->
+ </div>
