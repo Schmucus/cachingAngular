@@ -1,5 +1,5 @@
 <div class="scrolldiv">
-<div  *ngIf="logs; else elseBlock">
+<div  *ngIf="logsAvailable; else elseBlock">
   
   <div *ngFor="let log of logs">
     <app-log-details [log]="log"></app-log-details>
