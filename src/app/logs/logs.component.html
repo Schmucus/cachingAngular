@@ -1,7 +1,7 @@
 <div class="scrolldiv">
-<div  *ngIf="logsAvailable; else elseBlock">
+<div  *ngIf="newLogs; else elseBlock">
   
-  <div *ngFor="let log of logs">
+  <div *ngFor="let log of newLogs">
     <app-log-details [log]="log"></app-log-details>
      <hr>
   </div>

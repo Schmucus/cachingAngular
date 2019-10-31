@@ -8,26 +8,30 @@ import { Log } from '../log';
 })
 export class LogsComponent implements OnInit {
 
-  //logs: Log[];
+  newLogs: Log[];
   logsAvailable: boolean;
 
   @Input()
   set logs(logs: Log[]) {
-    this.logs = logs;
-    if ( logs.length>0) {
-      this.logsAvailable = true;
-      console.log('true');
-    } else {
-      this.logsAvailable = false;
-      console.log('false');
-    }
+    this.newLogs = logs;
+    if (this.newLogs) {
+    console.log('Logs übergeben');
+    console.log('Logs Größe: ' + logs.length);
+  } else {
+    console.log('kein Array übergeben');
   }
+  };
+  
+
+
 
   
 
   
 
-  constructor() { }
+  constructor() {
+    this.logsAvailable = true;
+   }
 
   ngOnInit() {
     console.log('logs.component ngOnInit');
