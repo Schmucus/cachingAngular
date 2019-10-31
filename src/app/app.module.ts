@@ -19,13 +19,14 @@ import {Router, RouterModule, Routes} from '@angular/router';
 import {TableModule} from 'primeng/table';
 import {MenuModule} from 'primeng/menu';
 import { LogsComponent } from './logs/logs.component';
+import { LogDetailsComponent } from './log-details/log-details.component';
 
 
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, GMapModule, TabViewModule, TabMenuModule, TableModule, MenuModule, BrowserAnimationsModule, RouterModule  ],
-  declarations: [ AppComponent, HelloComponent, CacheShortDetailsComponent, TestComponent, MapsComponent, FullDetailsComponent, DetailsMenuComponent, LogsComponent ],
+  declarations: [ AppComponent, HelloComponent, CacheShortDetailsComponent, TestComponent, MapsComponent, FullDetailsComponent, DetailsMenuComponent, LogsComponent, LogDetailsComponent ],
   bootstrap:    [ AppComponent ],
   providers: [CachesService, { provide: Router, useValue: {} }]
 })
