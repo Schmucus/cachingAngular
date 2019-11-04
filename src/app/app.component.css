@@ -6,7 +6,6 @@ td {
   padding: 0px;
   padding-left: 10px;
   vertical-align: top;
-  height: 100%;
 }
 
 .scrolldiv {
@@ -24,13 +23,16 @@ div {
 
 .fulldiv {
   height: 50vh;
-  background-color: red;
   margin-top: 0px;
   border-top: 0px;
   padding-top: 0px;
   margin-bottom: 0px;
   border-bottom: 0px;
   padding-bottom: 0px;
+}
+
+.scrolldiv {
+  height: 99vh;
 }
 
 
